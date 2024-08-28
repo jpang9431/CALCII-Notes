@@ -48,7 +48,18 @@ For any 'co' version of the function multiply the result by -1
 |Inverse Tangent|$\frac{d}{dx}[tan^-1u]$|$\frac{u'}{1+u^2}$|
 |Inverse Secant|$\frac{d}{dx}[sec^-1u]$|$\frac{u'}{\|u\|\sqrt{u^2-1}}$|
 
+## Separable Differential Equation
+If $\frac{dy}{dx}=f(y)*g(x)$ than $\frac{1}{f(y)}dy=g(x)dx$\
+If $\frac{dy}{dt} = ky$ where k is a constant than $|y|=Ce^{kt}$\
+If $f(x)=x+y$ then $f'(x)=1+\frac{dy}{dx}$
+
 ## Integral Rules
 Fundamental Theorem of Calculus: $\int_a^b{f'(x)dx}=f(b)-f(a)$
 |Name |Derivative |Result |
 |-----|:------------:|:-------:|
+|Constant|$\int Cdx$|$Cx$|
+|Simple Function|$\int f(x)dx$|$f(x)+C$|
+|Fraction|$\int \frac{1}{u} du$|$ln\|u\|+C$
+|Exponential|$\int a^u du$|$\frac{a^u}{ln(a)u'}$|
+
+
