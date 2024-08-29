@@ -38,9 +38,9 @@ For any \primeco\prime version of the function multiply the result by -1
 |Inverse Secant|$\frac{d}{dx}[sec^-1u]$|$\frac{u\prime}{\|u\|\sqrt{u^2-1}}$|
 
 ## Separable Differential Equation
-If $\frac{dy}{dx}=f(y)*g(x)$ than $\frac{1}{f(y)}dy=g(x)dx$\
+If $\frac{dy}{dx}=f(y)*g(x)$ than $\frac{1}{f(y)}dy=g(x)dx$
 
-If $\frac{dy}{dt} = ky$ where k is a constant than $|y|=Ce^{kt}$\
+If $\frac{dy}{dt} = ky$ where k is a constant than $|y|=Ce^{kt}$
 
 If $f(x)=x+y$ then $f\prime(x)=1+\frac{dy}{dx}$
 
