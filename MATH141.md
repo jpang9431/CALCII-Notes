@@ -1,7 +1,8 @@
 # Math 141
 
 ## Limit Definition of Derivative
-$f\prime(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}$\
+$f\prime(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}$
+
 $f\prime(a)=\lim_{x \to a}{\frac{f(x)-f(a)}{x-a}}$
 
 ## Derivative Rules
@@ -38,7 +39,9 @@ For any \primeco\prime version of the function multiply the result by -1
 
 ## Separable Differential Equation
 If $\frac{dy}{dx}=f(y)*g(x)$ than $\frac{1}{f(y)}dy=g(x)dx$\
+
 If $\frac{dy}{dt} = ky$ where k is a constant than $|y|=Ce^{kt}$\
+
 If $f(x)=x+y$ then $f\prime(x)=1+\frac{dy}{dx}$
 
 ## Integral Rules
