@@ -10,7 +10,7 @@ $f\prime(a)=\lim_{x \to a}{\frac{f(x)-f(a)}{x-a}}$
 |-----|:------------:|:-------:|
 |Constant|$\frac{d}{dx}[C]$|0|
 |Power|$\frac{d}{dx}[x^n]$|$nx^{n-1}$|
-|Exponential|$\frac{d}{dx}[a^u]$|$a^u*u\prime*ln(a)$
+|Exponential|$\frac{d}{dx}[a^u]$|$a^u*u\prime *ln(a)$
 |Constant Multiply|$\frac{d}{dx}[C*f(x)]$|$C*f\prime(x)$|
 |Multiply Functions|$\frac{d}{dx}[f(x)g(x)]$|$f\prime(x)g(x)+g\prime(x)f(x)$|
 |Divide Functions|$\frac{d}{dx}[\frac{f(x)}{g(x)}]$|$\frac{f\prime(x)g(x)-g\prime(x)f(x)}{g(x)^2}$|
