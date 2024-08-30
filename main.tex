@@ -1,0 +1,205 @@
+\documentclass[17pt]{extarticle}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tabularray}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{fontspec}
+
+
+
+\definecolor{githubbackground}{HTML}{212830}
+\definecolor{githublightgray}{HTML}{313844}
+
+
+\defaultfontfeatures{Ligatures=TeX,Color=white}
+\setmainfont{Linux Libertine O}
+\everymath{\color{white}}
+\pagecolor{githubbackground}
+
+\title{Calc II Notes}
+\author{SuperExago and Tepoys}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This will primarily consist of formulas necessary for calculations
+\end{abstract}
+\clearpage
+\section{Derivatives}
+Instantaneous rate of change at a point
+\subsection{Limit Definition of Derivatives}
+$f\prime(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}$\\
+$f\prime(a)=\lim_{x \to a}{\frac{f(x)-f(a)}{x-a}}$
+
+\arrayrulecolor{lightgray}
+\subsection{Basic Derivatives}
+\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Derivative & Result\\
+
+\hline
+Constant&$\frac{d}{dx}[C]$&0\\
+\hline
+Power&$\frac{d}{dx}[u^n]$&$n*u^{n-1}*u\prime$\\
+\hline
+Exponential&$\frac{d}{dx}[a^u]$&$a^u*u\prime *ln(a)$\\
+\hline
+Constant Multiply&$\frac{d}{dx}[C*f(x)]$&$C*\frac{d}{dx}[f(x)]$\\
+\hline
+Multiply Functions&$\frac{d}{dx}[f(x)g(x)]$&$f\prime(x)g(x)+g\prime(x)f(x)$\\
+\hline
+Divide Functions&$\frac{d}{dx}[\frac{f(x)}{g(x)}]$&$\frac{f\prime(x)g(x)-g\prime(x)f(x)}{g(x)^2}$\\
+\hline
+Chain Rule&$\frac{d}{dx}[f(g(u))]$&$f\prime(g(u))*g\prime(u)*u\prime$\\
+\hline
+Logarithm&$\frac{d}{dx}[log_au]$&$\frac{u\prime}{uln(a)}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\arrayrulecolor{lightgray}
+\subsection{Trigonometric Derivatives}
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Derivative & Result\\
+\hline
+Sine&$\frac{d}{dx}[sin(u)]$&$cos(u)u\prime$\\
+\hline
+Cosine&$\frac{d}{dx}[cos(u)]$&$-sin(u)u\prime$\\
+\hline
+Tangent&$\frac{d}{dx}[tan(u)]$&$sec^2(u)u\prime$\\
+\hline
+Cotangent&$\frac{d}{dx}[cot(u)]$&$-csc^2(u)u\prime$\\
+\hline
+Secant&$\frac{d}{dx}[sec(u)]$&$sec(u)tan(u)u\prime$\\
+\hline
+Cosecant&$\frac{d}{dx}[csc(u)]$&$-csc(u)cot(u)u\prime$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Inverse Trigonometric Derivatives}
+For any ``co-'' version of the trig function multiply the \\result by -1
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Derivative & Result\\
+\hline
+Inverse Sine&$\frac{d}{dx}[sin^{-1}u]$&$\frac{u\prime}{\sqrt{1-u^2}}$\\
+\hline
+Inverse Tangent&$\frac{d}{dx}[tan^{-1}u]$&$\frac{u\prime}{1+u^2}$\\
+\hline
+Inverse Secant&$\frac{d}{dx}[sec^{-1}u]$&$\frac{u\prime}{\&u\&\sqrt{u^2-1}}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Separable Differential Equation}
+If $\frac{dy}{dx}=f(y)*g(x)$ than $\frac{1}{f(y)}dy=g(x)dx$\\
+If $\frac{dy}{dt} = ky$ where k is a constant than $\lvert y\rvert=Ce^{kt}$\\
+If $f(x)=x+y$ then $f\prime(x)=1+\frac{dy}{dx}$\\
+\clearpage
+\section{Integrals}
+Area under the curve
+\subsection{Basic Integrals}
+Note that $F\prime(x)=f(x)$
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Integral & Result\\
+\hline
+Fundamental theorem of Calculus&$\int_{a}^{b}f(x)$&$F(b)-F(a)$\\
+\hline
+Simple Function & $\int f(x)$&$F(x)+C$\\
+\hline
+Power Rule & $\int [x^n]dx$&$\frac{x^{n+1}}{n+1}+C$\\
+\hline
+Reciprocal Function & $\int [\frac{1}{x}]dx$&$ln|x|+C$\\
+\hline
+Exponential Function & $\int [a^u]dx$&$\frac{a^u}{ln(a)u\prime}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Trigometric Integrals}
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Integral & Result\\
+\hline
+Sine & $\int[sinx]dx$ & $-cosx+C$\\
+\hline
+Cosine &$\int[cosx]dx$ & $sinx+C$\\
+\hline
+Secant &$\int[sec^2x]dx$&$tanx+C$\\
+\hline
+Cosecant &$\int[csc^2x]dx$&$-cotx+C$\\
+\hline
+Sectan &$\int[secxtanx]dx$&$secx+C$\\
+\hline
+Coseccotan&$\int[cscxcotx]dx$&$-cscx+C$\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{Volumes of Revolution}
+Rotating a function(s) around an axis to find the volume of the 3d resulting object
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Formula\\
+\hline
+Total Volume & $\int_{a}^{b}A(x)$\\
+\hline
+Disk Method &$\int_{a}^{b}\pi f(x)^2dx$s\\
+\hline
+Shell method &$\int_{a}^{b}2\pi xf(x)dx$\\
+\hline
+Shell between &$\int_{a}^{b}2\pi x(f(x)-g(x))dx$\\
+\hline
+Washer method &$\int_{a}^{b}\pi(f(x)^2-g(x)^2)dx$\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\end{document}
