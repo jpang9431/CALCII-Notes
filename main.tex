@@ -6,7 +6,7 @@
 
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[letterpaper,top=2cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=.5cm,right=.5cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
 \usepackage{amsmath}
@@ -17,7 +17,7 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{fontspec}
-
+\usepackage{makecell}
 
 
 \definecolor{githubbackground}{HTML}{212830}
@@ -51,6 +51,7 @@ $f\prime(a)=\lim_{x \to a}{\frac{f(x)-f(a)}{x-a}}$
 \renewcommand{\arraystretch}{2}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -82,6 +83,7 @@ Logarithm&$\frac{d}{dx}[log_au]$&$\frac{u\prime}{uln(a)}$\\
 \arrayrulecolor{lightgray}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -108,6 +110,7 @@ For any ``co-'' version of the trig function multiply the result by -1
 \arrayrulecolor{lightgray}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -135,6 +138,7 @@ Note that $F\prime(x)=f(x)$
 \arrayrulecolor{lightgray}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -158,6 +162,7 @@ Exponential Function & $\int [a^u]dx$&$\frac{a^u}{ln(a)u\prime}$\\
 \arrayrulecolor{lightgray}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -177,12 +182,16 @@ Coseccotan&$\int[cscxcotx]dx$&$-cscx+C$\\
 \hline
 \end{tabular}
 \end{table}
+\clearpage
+\section{Applications of Integrals}
+Applying integrals to solve problems
 \subsection{Volumes of Revolution}
 Rotating a function(s) around an axis to find the volume of the 3d resulting object
 \renewcommand{\arraystretch}{2}
 \arrayrulecolor{lightgray}
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor{githublightgray}
@@ -201,5 +210,26 @@ Washer method &$\int_{a}^{b}\pi(f(x)^2-g(x)^2)dx$\\
 \end{tabular}
 \end{table}
 
+\clearpage
+\subsection{Work}
+$F$ is force, $a$ and $b$ are points along an axis with $b$ being further than $a$, and $W$ is work\\
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{githublightgray}
+Name & Formula & Notes\\
+\hline
+Constant Force Work&$F(b-a)$&Requires Force to be Constant\\
+\hline
+Varied Force Work&$\int_{a}^{b}F(x)dx$&\makecell{If the direction of force and motion are the \\same than $F(x)>=0$ otherwise $F(X)<=0$}\\
+\hline
+Hooke's Law&$F(X)=kx$&\makecell{$k$ is the spring constant and $x$ is the spring \\constant}\\
+\hline
+\end{tabular} 
+\end{table}
 
 \end{document}
