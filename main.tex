@@ -18,7 +18,7 @@
 \usepackage{colortbl}
 \usepackage{fontspec}
 \usepackage{makecell}
-
+\usepackage{tabularx} 
 
 \definecolor{githubbackground}{HTML}{212830}
 \definecolor{githublightgray}{HTML}{313844}
@@ -45,6 +45,9 @@ Instantaneous rate of change at a point
 \subsection{Limit Definition of Derivatives}
 $f\prime(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}$\\
 $f\prime(a)=\lim_{x \to a}{\frac{f(x)-f(a)}{x-a}}$
+
+
+\setlength\arrayrulewidth{2pt}
 
 \arrayrulecolor{lightgray}
 \subsection{Basic Derivatives}
@@ -218,20 +221,70 @@ $F$ is force which equals mass times acceleration, $a$ and $b$ are points along 
 \begin{table}[H]
 \rowcolors{2}{githublightgray}{githubbackground}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabularx}{1.0\textwidth}{|l|l|X|}
 \hline
 \rowcolor{githublightgray}
 Name & Formula & Notes\\
 \hline
 Constant Force Work&$F(b-a)$&Requires Force to be Constant\\
 \hline
-Varied Force Work&$\int_{a}^{b}F(x)dx$&\makecell[l]{If direction of force and motion are \\same than $F(x)>=0$ else $F(x)<=0$}\\
+Varied Force Work&$\int_{a}^{b}F(x)dx$&If direction of force and motion are same than $F(x)>=0$ else $F(x)<=0$\\
 \hline
-Hooke's Law&$F(x)=kx$&\makecell[l]{$k$ is the spring constant and $x$ is the \\displacement}\\
+Hooke's Law&$F(x)=kx$&$k$ is the spring constant and $x$ is the displacement\\
 \hline
-Pump Liquid&$\int_{a}^{b}d*h(y)A(y)dy$&\makecell[l]{$d$ is density, $h(y)$ is distance the layer\\ is being lifted, $A(y)$ is the area of the \\layer. 62.5 is water density}\\
+Pump Liquid&$\int_{a}^{b}d*h(y)A(y)dy$&$d$ is density, $h(y)$ is distance the layer is being lifted, $A(y)$ is the area of the layer. 62.5 is water density\\
 \hline
-\end{tabular} 
+\end{tabularx} 
 \end{table}
+
+
+\clearpage
+\subsection{Moment and Center of Mass}
+Centroid is the center of mass. m represents mass.
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\centering
+\begin{tabularx}{1.0\textwidth}{|l|l|X|}
+\hline
+\rowcolor{githublightgray}
+Name & Formula & Notes\\
+\hline
+Moment & $m*distance$ & m is mass\\
+\hline
+x Moment $(M_{x})$ & $\int_{a}^{b}\frac{1}{2}(f(x)^2-g(x)^2)dx$) &x moment if infinite number of particles in the area between a, b, f(x), and g(x)\\
+\hline
+y Moment $(M_{y})$& $\int_{a}^{b}x(f(x)-g(x))dx$) & y moment if infinite number of particles in the area between a, b, f(x), and g(x)\\
+\hline
+$\bar{x}$&$\frac{M_{y}}{A}$&Which is the x value of the centriod and A being area\\
+\hline
+$\bar{y}$&$\frac{M_{x}}{A}$&Which is the y value of the centriod and A being area\\
+\hline
+\end{tabularx} 
+\end{table}
+
+\clearpage
+\section{Parameterized Curves}
+Curve where any point on the curve is a function of t on [a,b]: $(x=f(t),y=g(t))$ for t in $[a,b]$
+\renewcommand{\arraystretch}{2}
+\arrayrulecolor{lightgray}
+\begin{table}[H]
+\rowcolors{2}{githublightgray}{githubbackground}
+\centering
+\begin{tabularx}{1.0\textwidth}{|l|l|X|}
+\hline
+\rowcolor{githublightgray}
+Name & Formula & Notes\\
+\hline
+Parameterized Curves & $x=f(t), y=g(t)$ & Over t in [a,b], to find the equation solve to relate y and x removing t\\
+\hline
+Length of Curve & $\int_{a}^{b}\sqrt{f\prime(t)^2+g\prime(t)^2}dy$ & Divide curve into small subsections, estimate with line, sum over line, take the limit. \\
+\hline
+Length of Curve if $x=x$ and $y=h(x)$ & $\int_{a}^{b}\sqrt{1+h\prime(x)^2}dx$ & A special case that comes from the general formula.\\
+\hline
+\end{tabularx} 
+\end{table}
+
 
 \end{document}
